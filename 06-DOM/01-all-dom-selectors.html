@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="title">DOM Selctors</h2>
+    <h3 class="subtitle" name="name-selection">
+      Lorem ipsum dolor sit amet consectetur.
+    </h3>
+    <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+    <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+    <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+    <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur.</h3>
+
+    <div id="listItem">
+      <ul id="ul-list">
+        <li class="list-item">One</li>
+        <li class="list-item">Two</li>
+        <li class="list-item">Three</li>
+        <li class="list-item">Four</li>
+        <li class="list-item">Five</li>
+      </ul>
+    </div>
+
+    <script>
+      //  Select by tag name return HTMLCollection List
+
+      const bodyTag = document.getElementsByTagName("body");
+      bodyTag[0].style.backgroundColor = "black";
+      bodyTag[0].style.color = "White";
+
+      // console.log(bodyTag);
+
+      const listTags = document.getElementsByTagName("li");
+      // console.log(listTags)
+
+      // Selection By namereturn node list
+      const selectByName = document.getElementsByName("name-selection");
+      // console.log(selectByName)
+
+      // Select by id return html element
+      const idSelection = document.getElementById("title");
+      // console.log(idSelection)
+
+      // select by class name return html collection
+      const classSeletor = document.getElementsByClassName("subtitle");
+      // console.log(classSeletor);
+
+      // select by query selector return html element
+      const querySelector = document.querySelector("#title");
+      // console.log(querySelector);
+
+      // select by query selector ALL return Node List
+      const querySelectorAll = document.querySelectorAll("#title");
+      // console.log(querySelectorAll);
+
+      //--------------------------------------------------------
+
+      const ulElements = document.querySelector("#ul-list");
+      // console.dir(ulElements);
+      const ulElementsChilds = ulElements.children;
+      // console.log(ulElements)
+      const arrElement = Array.from(ulElementsChilds).forEach((e) => {
+        console.log(e);
+        e.style.color = "blue";
+      });
+      // console.log(arrElement);
+    </script>
+
+    <!-- <script src="./main.js"></script> -->
+  </body>
+</html>
