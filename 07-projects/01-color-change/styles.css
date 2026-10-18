@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.parent-box{
+    display: flex;
+    gap: 10px;
+}
+.parent-box > * {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border: 1px solid;
+}
+
+#gray{
+    background-color: gray;
+}
+
+#pink{
+    background-color: pink;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#black{
+    background-color: black;
+}
+#purple{
+    background-color: purple;
+}
